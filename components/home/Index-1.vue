@@ -1,0 +1,40 @@
+<template>
+  <div class="card-started" id="home-card">
+    <div class="profile no-photo">
+      <!-- profile image -->
+      <div
+        class="slide"
+        style="background-image: url(images/man5_big.jpg)"
+      ></div>
+
+      <!-- profile titles -->
+      <div class="title">{{ defaultData.name }}</div>
+      <!--<div class="subtitle">Web Designer</div>-->
+      <TypingAnimation :arr="defaultData.typeingAnimation" />
+      <!-- profile socials -->
+      <SocialLinks :socialLinks="defaultData.socialLinks" />
+
+      <!-- profile buttons -->
+      <div class="lnks">
+        <a href="#" class="lnk">
+          <span class="text">Download CV</span>
+          <span class="ion ion-archive"></span>
+        </a>
+        <a
+          href="#"
+          class="lnk discover"
+          @click="navFunction.activeSection('contacts')"
+        >
+          <span class="text">Contact Me</span>
+          <span class="arrow"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { defaultData } from "../../utils/data";
+import { navFunction } from "../../utils/navFunction";
+export default {};
+</script>
