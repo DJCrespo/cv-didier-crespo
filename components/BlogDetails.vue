@@ -13,29 +13,20 @@
     <div class="card-wrap">
       <div class="content blog-single">
         <!-- title -->
-        <div class="title">Blog Post</div>
+        <div class="title">{{ navFunction.projectData ? navFunction.projectData.title : 'No hay' }}</div>
 
         <!-- content -->
         <div class="row border-line-v">
           <div class="col col-m-12 col-t-12 col-d-12">
             <div class="post-box">
-              <!-- blog detail -->
-              <h1 class="h-title">
-                Procuring Education on Consulted Assurance in Do
-              </h1>
-              <div class="blog-detail">
-                <span class="date">April 28, 2020</span>
-                <span class="cat-links"
-                  ><a href="#">Design</a>, <a href="#">Music</a></span
-                >
-                <span class="byline">
-                  by <span class="author"><a href="#">admin</a></span></span
-                >
-              </div>
 
               <!-- blog image -->
               <div class="blog-image">
-                <img src="/images/blog/blog1.jpg" alt="" />
+                <img
+                  v-if="navFunction.projectData"
+                  :src="navFunction.projectData.img"
+                  :alt="navFunction.projectData.title"
+                />
               </div>
 
               <!-- blog content -->
@@ -112,6 +103,7 @@
           </div>
         </div>
 
+        <!--
         <nav class="navigation post-navigation">
           <div class="nav-links">
             <div class="nav-previous">
@@ -126,7 +118,9 @@
             </div>
           </div>
         </nav>
+        -->
 
+        <!--
         <div class="post-comments">
           <div class="title">3 Comments</div>
           <div class="row border-line-v comments-row">
@@ -228,42 +222,16 @@
             </div>
           </div>
         </div>
+        -->
 
         <div class="post-comments">
-          <div class="title">Leave a Comment</div>
           <div class="row border-line-v">
             <div class="col col-m-12 col-t-12 col-d-12">
-              <div class="post-box">
-                <form id="cform" method="post">
-                  <div class="row">
-                    <div class="col col-d-12 col-t-12 col-m-12">
-                      <div class="group-val">
-                        <input
-                          type="text"
-                          name="name"
-                          placeholder="Full Name"
-                        />
-                      </div>
-                    </div>
-                    <div class="col col-d-12 col-t-12 col-m-12">
-                      <div class="group-val">
-                        <textarea
-                          name="message"
-                          placeholder="Your Message"
-                        ></textarea>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="align-left">
-                    <a href="#" class="button">
-                      <span class="text">Add Comment</span>
-                      <span class="arrow"></span>
-                    </a>
-                  </div>
-                </form>
-                <div class="alert-success">
-                  <p>Thanks, your message is sent successfully.</p>
-                </div>
+              <div class="align-left">
+                <a href="#" class="button" @click="returnProjects">
+                  <span class="text">Regresar</span>
+                  <span class="arrow"></span>
+                </a>
               </div>
             </div>
           </div>
@@ -282,6 +250,9 @@ export default {
       type: String,
     },
     extraCls: { type: String },
+    projectData: {
+      type: Object,
+    }
   },
   data() {
     return {
@@ -296,6 +267,11 @@ export default {
       width = window.innerWidth;
       this.width = width > 1200 ? true : false;
     });
+  },
+  methods: {
+    returnProjects() {
+      navFunction.activeSection("works", {});
+    },
   },
 };
 </script>

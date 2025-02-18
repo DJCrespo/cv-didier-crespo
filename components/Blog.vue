@@ -1,8 +1,8 @@
 <template>
-  <ActiveSection :section-name="'blog'">
+  <ActiveSection :section-name="'works'">
     <div class="content blog">
       <!-- title -->
-      <div class="title">Blog</div>
+      <div class="title">Proyectos</div>
 
       <!-- content -->
       <div class="row border-line-v">
@@ -54,6 +54,7 @@
 <script>
 import { navFunction } from "../utils/navFunction";
 import { blogs } from "../utils/data";
+import { projects } from "../utils/data-djcrespo";
 export default {
   data() {
     return {

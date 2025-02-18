@@ -2,10 +2,12 @@ import { reactive } from "vue";
 
 export const navFunction = reactive({
   active: "about",
+  projectData: null,
   sidebar: false,
   width: false,
-  activeSection(value) {
+  activeSection(value, data) {
     this.active = value;
+    this.projectData = data;
   },
   activeNav(value) {
     return this.active === value ? "active" : "";

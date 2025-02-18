@@ -1,9 +1,11 @@
 <template>
-  <div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+  <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+    <!--
     <div class="resume-title border-line-h">
       <div class="icon"><i class="ion ion-university"></i></div>
       <div class="name">Education</div>
     </div>
+    -->
     <div class="resume-items">
       <div
         v-for="education in educations"
@@ -23,11 +25,12 @@
 
 <script>
 import { defaultData } from "../../utils/data";
+import { djcrespoInfo } from "../../utils/data-djcrespo";
 export default {
   props: {
     educations: {
       type: Array,
-      default: defaultData.educations,
+      default: djcrespoInfo.educations,
     },
   },
 };

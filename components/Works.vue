@@ -2,7 +2,7 @@
   <ActiveSection :section-name="'works'">
     <div class="content works">
       <!-- title -->
-      <div class="title">Recent Works</div>
+      <div class="title">Proyectos</div>
       <!-- filters -->
       <div class="filter-menu filter-button-group">
         <div class="f_btn active">

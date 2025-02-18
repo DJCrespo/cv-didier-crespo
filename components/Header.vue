@@ -2,7 +2,7 @@
   <header class="header">
     <!-- header profile -->
     <div class="profile">
-      <div class="title">Ryan Adlard</div>
+      <div class="title">Didier Crespo Castilla</div>
       <TypingAnimation />
     </div>
 
@@ -46,17 +46,17 @@ export default {
     arr: { type: Array },
     name: {
       type: String,
-      default: "Ryan Adlard",
+      default: "Didier Crespo Castilla",
     },
     menus: {
       type: [Object, Array],
       default: function () {
         return [
-          { name: "About", href: "about", icon: "icon ion-person" },
-          { name: "Resume", href: "resume", icon: "icon ion-android-list" },
-          { name: "Works", href: "works", icon: "icon ion-paintbrush" },
-          { name: "Blog", href: "blog", icon: "icon ion-chatbox-working" },
-          { name: "Contact", href: "contacts", icon: "icon ion-at" },
+          { name: "Sobre mí", href: "about", icon: "icon ion-person" },
+          { name: "Experiencia", href: "resume", icon: "icon ion-android-list" },
+          // { name: "Works", href: "works", icon: "icon ion-code-slash" },
+          { name: "Proyectos", href: "works", icon: "icon ion-code" },
+          { name: "Contacto", href: "contacts", icon: "icon ion-at" },
         ];
       },
     },

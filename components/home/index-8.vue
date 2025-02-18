@@ -7,28 +7,28 @@
       <!-- profile image -->
       <div
         class="slide"
-        style="background-image: url(images/profile7.jpg)"
+        style="background-image: url(images/djcrespo/bg.jpg)"
       ></div>
 
       <!-- profile titles -->
-      <div class="title">{{ musician.name }}</div>
+      <div class="title">{{ djcrespoInfo.name }}</div>
       <!--<div class="subtitle">Web Designer</div>-->
-      <TypingAnimation :arr="musician.typeingAnimation" />
+      <TypingAnimation :arr="djcrespoInfo.typeingAnimation" />
       <!-- profile socials -->
-      <SocialLinks :socialLinks="musician.socialLinks" />
+      <SocialLinks :socialLinks="djcrespoInfo.socialLinks" />
 
       <!-- profile buttons -->
       <div class="lnks">
         <a href="#" class="lnk">
-          <span class="text">My Playlist</span>
-          <span class="ion ion-play"></span>
+          <span class="text">Mi CV</span>
+          <span class="ion ion-archive"></span>
         </a>
         <a
           href="#"
           class="lnk discover"
           @click="navFunction.activeSection('contacts')"
         >
-          <span class="text">Contact Me</span>
+          <span class="text">Contacto</span>
           <span class="ion ion-email"></span>
         </a>
       </div>
@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import { musician } from "../../utils/data";
+import { djcrespoInfo } from "../../utils/data-djcrespo";
 import { navFunction } from "../../utils/navFunction";
 export default {};
 </script>

@@ -5,7 +5,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "Ryan - vCard / Resume / CV Template",
+      title: "Didier Crespo Castilla - CV",
       htmlAttrs: {
         lang: "en",
       },
@@ -38,4 +38,6 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  compatibilityDate: "2024-11-22",
 });
